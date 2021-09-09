@@ -1,0 +1,17 @@
+{
+  "name": "simple-blockchain",
+  "version": "1.0.0",
+  "description": "A simple blockchain project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "start": "tsc && node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Carroll",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.9.0",
+    "typescript": "^4.4.2"
+  }
+}
