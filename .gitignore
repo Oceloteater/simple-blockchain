@@ -1,3 +1,7 @@
 .idea
 node_modules
 index.js
+components/Block.js
+components/Chain.js
+components/Transaction.js
+components/Wallet.js
