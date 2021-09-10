@@ -1,3 +1,6 @@
+/**
+ * Object representing a transaction between a payer and payee
+ */
 export class Transaction {
     constructor(
         public amount: number,

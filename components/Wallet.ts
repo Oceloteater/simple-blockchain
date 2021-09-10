@@ -2,10 +2,16 @@ import crypto from 'crypto';
 import { Chain } from './Chain';
 import { Transaction } from './Transaction';
 
+/**
+ * Object representing a customers wallet
+ */
 export class Wallet {
     public publicKey: string;
     public privateKey: string;
 
+    /**
+     * Constructor which creates a linked public and private key pairing using RSA
+     */
     constructor() {
         const keyPair = crypto.generateKeyPairSync('rsa', {
             modulusLength: 2048,
@@ -17,6 +23,12 @@ export class Wallet {
         this.privateKey = keyPair.privateKey;
     }
 
+    /**
+     * Function writing a new block to the blockchain complete with transaction and signature
+     *
+     * @param amount
+     * @param payeePublicKey
+     */
     sendMoney(amount: number, payeePublicKey: string) {
         const transaction = new Transaction(amount, this.publicKey, payeePublicKey);
 
